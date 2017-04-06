@@ -1,0 +1,21 @@
+
+Documentación de Germán
+https://github.com/germanux/cursomeanstack
+https://github.com/germanux/cursomeanstack_v2
+
+ANALISIS DE REQUISITOS
+-CASOS DE USO
+ANALISIS DE SOFTWARE
+-DIAGRAMA DE FLUJOS
+
+
+NODE:
+webstorage  --> setItem(clave,valor)
+            --> getItem(clave)
+Tiene 2 objetos:
+-sesionstorage  --> variables a nivel de sesión, cuando cierres el navegador lo borras, no lo usamos si usamos servidor
+-localstorage   --> variables a nivel de disco, en archivos temporales tiene guardado lo que necesites usar, p.e. un objeto json con stringify, y parseJSON
+
+Instalar el modulo de localstorage para node(servidor)
+    npm install node-localstorage
+

@@ -1,0 +1,25 @@
+<html>
+
+<head></head>
+
+
+<body>
+    <div id="perro"></div>
+    <div id="gato"></div>
+</body>
+
+<script type="text/javascript">
+    localStorage.setItem("gato","miauu");
+    localStorage.setItem("perro","guauu");
+
+    var gato = localStorage.getItem("gato");
+    var perro = localStorage.getItem("perro");
+
+    console.log(gato +","+perro);
+
+    document.getElementById("gato").innerHTML = gato;
+    document.getElementById("perro").innerHTML = perro;
+
+</script>
+</html>
+
