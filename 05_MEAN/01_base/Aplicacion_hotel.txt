@@ -1,0 +1,42 @@
+OBTENER DE REQUISITOS, ANALIZAR:
+Presentación con Fotos del hotel
+
+Reserva de hoteles,
+Minima reserva: ID-Reserva
+-Nombre
+-email --> nºreserva
+-Fecha entrada
+-Fecha Salida
+-Tipo de habitación
+    -Simples
+    -Dobles
+-nº personas
+-Desayuno incluido o no
+-Precio reserva: --> Por habitacion y dia
+    -Simple: 40€
+    -Doble: 60€
+    -Desayuno: 10€/persona  Campo opcional
+
+Envio E-mail automático con reserva.
+
+6 Simples
+4 Dobles
+Lista de reservas
+
+Medios de Pagos Solo tarjeta de credito
+    -Pago entero de la reserva
+    -Cancelación de reserva 48horas antes del mediodia de la fecha de entrada de la reserva y sino, no devuelves nada(la hace un gestor del hotel(administrador)), pero se puede seguir cancelando después
+
+
+Roles: Usuario y administrador
+Administrador login, sólo para admin
+
+Dos urls para usuario y administrador
+Comunicación por telefono o por correo o por chat
+    Administrador también hace reserva por telefono y correo
+    Chat para las cancelaciones
+        Registro de chat
+
+Politica de Cookies(aunque hagas localstorage) y Ley LOPD al abrir chat
+Opiniones de usuario (opcional)
+Ubicacion con Google Maps

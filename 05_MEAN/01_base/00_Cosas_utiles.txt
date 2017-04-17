@@ -14,6 +14,7 @@ GADWIN PRINTSCREEN
 
 PAGINA DE CURRO:
 -www.ticjob.es
+-https://www.tecnoempleo.com/
 
 Emulador de API Rest, para Firefox:
 -HttpRequester

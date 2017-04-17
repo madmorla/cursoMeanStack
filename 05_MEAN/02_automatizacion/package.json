@@ -1,0 +1,16 @@
+{
+  "name": "03-grunt-prueba",
+  "version": "1.0.0",
+  "description": "Prueba Grunt",
+  "main": "01-jshint-ejemplo-bueno.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nosotros mismos",
+  "license": "ISC"
+}

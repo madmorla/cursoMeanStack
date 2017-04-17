@@ -1,0 +1,31 @@
+'npm init' --> Crea un fichero de configuración package.json
+en el fichero tendremos por ejemplo:
+ {
+  "name": "03-grunt-prueba",
+  "version": "1.0.0",
+  "description": "Prueba Grunt",
+  "main": "01-jshint-ejemplo-bueno.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nosotros mismos",
+  "license": "ISC"
+}
+En 'dependencies' tendremos los modulos que usamos
+En 'test' podremos ejecutar comandos de los modulos, con 'npm test'
+
+Ejecutamos y vemos el package.json
+npm install grunt-contrib-uglify --save-dev
+
+Se añade en 'dependencies':
+   "grunt-contrib-uglify": "^2.3.0"
+
+Al llevarlo a producción no llevamos node_module:
+sino que luego instalamos con npm install y lo instala una por una cogiendolo de "dependencies"
+npm install
+
+Con el plugin 'npm-contrib-watch' ponemos a vigilar grunt y cada vez que se modifique un fichero en la carpeta se ejecuta la tarea.

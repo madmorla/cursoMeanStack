@@ -1,0 +1,39 @@
+para hacer esquemas:
+-microsoft visio
+-libreoffice draw --> casos de uso, diagramas, etc...
+-free plane
+-rational rose --> ibm, te crea clases e interfaces desde los diagramas, etc
+
+programa para diseñar apps en moviles o web
+-balsamic mockups 3
+-mockflow --> tiene buena pinta
+-wireframesketcher
+
+gadwin printscreen
+-ctrl + impr pant
+
+pagina de curro:
+-www.ticjob.es
+
+emulador de api rest, para firefox:
+-httprequester
+
+emulador api rest, para chrome:
+-postman
+-----------------------------------------------------------
+sistema de control de versiones (scv):(por comandos)
+-git --> para proyectos grandes distribuidos
+-subversion --> para proyectos pequeños y sobretodo para gente que no es técnica
+
+
+plataformas:
+-github --> proyectos públicos
+-bitbucket --> 1 proyecto privado
+
+clientes/programas/interfaces gráficas de scv:
+-tortoisegit --> se integra con el explorador de windows, y puedes hacer los comandos de git con el menu contextual(boton derecho)
+-sourcetree --> te muestra una linea temporal de lo que vamos haciendo
+cuenta atlasian: https://id.atlassian.com/profile/profile.action
+http://drunkcode.es/2015/07/07/sourcetree-y-olvidate-de-comandos/
+https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-source-tree/
+
