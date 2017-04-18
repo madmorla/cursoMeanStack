@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html data-ng-app="miAppClientes">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 4 AngularJS: Controlador</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="04_NG1_controlador.js"></script>
+</head>
+
+<body>
+    <div data-ng-controller="controladorSimpleDos">
+        <h3>{{ tituloDiv }}</h3>
+        <li data-ng-repeat="cliente in listadoClientes">
+            {{ cliente.nombre | uppercase}} - {{cliente.ciudad | lowercase}}
+        </li>
+    </div>
+    <div data-ng-controller="controladorSimple">
+        <h2>{{ tituloDiv + ", " + tituloDiv }}</h2>
+        <li data-ng-repeat="cliente in listadoClientes">
+            {{ cliente.nombre}} - {{cliente.ciudad}}
+        </li>
+    </div>
+</body>
+
+
+</html>

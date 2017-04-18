@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Las directivas son atributos de las etiquetas html que sirven para especificar algo en angular-->
+<html data-ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 1 AngularJS: Directivas</title>
+</head>
+
+<body data-ng-init="miBool = true; variosNombres=['Greta','Emilio','Daniel']; ciudades=['Madrid','Barcelona']">
+    <input type="checkbox" data-ng-model="miBool" /> {{miBool ? "Verdadero" : "Falso "}}
+    <br/>
+    <input type="button" value="Vaciar" data-ng-click="variosNombres=['Nadie']" />
+    <!--data-ng-change hace-->
+    <input type="text" value="" data-ng-model="esteInput" data-ng-change="variosNombres=[esteInput,'Otro elemento']" />
+    <h3>Bucle con NG Repeat</h3>
+    <ul>
+        <!--Recorrer array del model-->
+        <li ng-repeat="nombre in variosNombres" ng-init="i=$index;">
+            <!--$index es el indice del bucle-->
+            Elemento con id {{i}}: <span>{{nombre + " está presente"}}</span>
+        </li>
+    </ul>
+    <!-- Ejercicio
+    Mostrar un array de ciudades y mostrar el indice del array, con una lista ordenada y un boton y caja de texto para añadir elementos al array
+    -->
+    <h3>Ciudades</h3>
+    <ol>
+        <li ng-repeat="ciudad in ciudades track by $index">
+            <span>Ciudad {{$index}}: {{ciudad}}</span>
+        </li>
+    </ol>
+    <br/>
+    <input type="button" value="Añadir" data-ng-click="ciudades.push(nuevaCiudad); nuevaCiudad=''" />
+    <input type="text" data-ng-model="nuevaCiudad" />
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</html>

@@ -1,0 +1,19 @@
+AngularJS(Javascript) MVVM(Modelo-Vista Vista-Modelo)
+---------------------
+Vista
+Scope(Modelo/Controlador) (Contextos de ejecucion)
+
+
+
+
+Angular2(Typescript) MVC(Modelo Vista Controlador)
+---------------------
+Componentes
+Vista --> Clase
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Las directivas son atributos de las etiquetas html que sirven para especificar algo en angular-->
+<html data-ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo 3 AngularJS: Filtros</title>
+</head>
+
+<body data-ng-init="misClientes=[{nombre:'Fran',ciudad:'Cadiz'},{nombre:'Sergio',ciudad:'Madrid'},{nombre:'Angel',ciudad:'Madrid'},{nombre:'Julio',ciudad:'Madrid'},{nombre:'Pedro',ciudad:'Cadiz'}];
+siEsPar = true; pagina = 0">
+
+    Filtros:
+    <!-- .$ hace que no muestre [object Object] si escribes en el otro filtro -->
+    <br/>Por cualquiera: <input type="text" data-ng-model="miFiltro.$" />
+    <!-- Se vincula a la ciudad del cliente -->
+    <br/>Por ciudad: <input type="text" data-ng-model="miFiltro.ciudad" />
+    <!-- Se vincula al nombre del cliente -->
+    <br/>Si es par: <input type="checkbox" data-ng-model="siEsPar" />
+
+    <h3>Lista de clientes</h3>
+    <ul>
+        <!-- 'data-ng-show' pone todos los elementos pero añade ng-hide a los que se de en la condicion 
+        sin embargo 'data-ng-if' directamente no los pone en el html-->
+        <!--<li ng-repeat="cliente in misClientes | filter: miFiltro | orderBy: 'nombre' | limitTo: 5" data-ng-show="siEsPar == $odd">-->
+        <li ng-repeat="cliente in misClientes | filter: miFiltro | orderBy: 'nombre' | limitTo: 3: pagina * 3">
+            <span>Cliente num. {{$index + 1}} es: {{cliente.nombre}} de {{cliente.ciudad}}</span>
+        </li>
+    </ul>
+    <br/>
+    <!--Ejercicio 2 paginación-->
+    <input type="button" value="<" data-ng-click="pagina = pagina <= 0 ? pagina : pagina - 1" />
+    <span>Página {{ pagina }}</span>
+    <input type="button" value=">" data-ng-click="pagina = (misClientes.length < (pagina + 1)*3) ? pagina : pagina + 1" />
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+</html>
