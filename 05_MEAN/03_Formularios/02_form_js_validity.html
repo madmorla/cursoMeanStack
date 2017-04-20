@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario HTML5</title>
+
+    <script type="text/javascript">
+        function validacionPersonalizadaEmail(input) {
+            console.log(input.validity.valid);
+
+            if (!input.validity.valid) {
+                input.setCustomValidity(document.getElementById("mensaje").value);
+                return;
+            }
+            input.setCustomValidity("");
+        }
+    </script>
+    <style type="text/css">
+        #miForm input:valid {
+            border-color: lightgreen;
+        }
+        
+        #miForm input:invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <form id="miForm" action="#">
+        <input type="text" name="mensaje" id="mensaje" placeholder="Pon un mensaje de error" />
+        <input type="email" name="email_1" id="email1" placeholder="Introduzca el email" title="Esta campo es de tipo email" oninvalid="validacionPersonalizadaEmail(this)" required="required" />
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+
+</html>

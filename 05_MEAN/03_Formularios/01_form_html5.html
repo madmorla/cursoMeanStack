@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario HTML5</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!--Depende del navegador que funcionen estas caracteristicas-->
+    <!--
+    <form id="miForm" action="#">
+        <div class="form-group">
+            <p>Nombre: <input type="text" name="nombre" required="" /></p>
+            <p>Email: <input type="email" name="email" formnovalidate="" required="" /></p>
+            <p>Color: <input type="color" name="color" required="" /></p>
+            <p>URL: <input type="url" name="URL" required="" /></p>
+            <p>Edad: <input type="number" name="Edad" min="0" max="150" value="0" /></p>
+            <p>Rango: <input type="range" name="Rango" min="-50" max="50" step="10" /></p>
+
+            <p>Lista de cafés: <input type="text" name="lista_cafes" list="datos_cafes" /></p>
+            <datalist id="datos_cafes">
+                <option label="Café solo" value="Café solo" />
+                <option label="Café con leche" value="Café con leche" />
+                <option label="Café descafeinado" value="Café descafeinado" />
+                <option  value="Carajillo" />
+            </datalist>
+
+            <p>Fecha: <input type="date" name="fecha" /></p>
+            <p>Hora: <input type="time" name="time" /></p>
+            <p>Fecha y hora: <input type="datetime-local" name="datetime" /></p>
+            <p>Mes: <input type="month" name="mes" /></p>
+            <p>week: <input type="week" name="semana" /></p>
+            <p>Telefono: <input type="tel" name="telefono" /></p>
+            <p>Buscar: <input type="search" name="busqueda" /></p>
+            <p><input type="" name="" /></p>
+            <p><input type="" name="" /></p>
+            <p><input type="submit" value="Enviar" /></p>
+        </div>
+    </form>
+    -->
+    <!--Ejercicio-->
+    <script>
+        function ValidaCampos(formulario) {
+            var expresion_regular_nombre = /([a-zA-ZñN ]{3,}|German)/;
+
+            var exp_reg_tel = /^\d{9}$/;
+            var exp_reg_dni = /^\d{8}[a-zA-Z]{1}$/;
+            /*var exp_reg_tel = new RegExp("^\d{9}$");
+            var exp_reg_dni = new RegExp("^\d{8}[a-zA-Z]{1}$");*/
+
+            if (expresion_regular_nombre.test(formulario.nombre.value) == false) {
+                alert("Campo de nombre no válido");
+                return false;
+            }
+            if (exp_reg_tel.test(formulario.telefono.value) == false) {
+                alert("Campo de telefono no válido");
+                return false;
+            }
+            if (exp_reg_dni.test(formulario.dni.value) == false) {
+                alert("Campo de dni no válido");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <form id="miForm" action="#" onsubmit="return ValidaCampos(this);">
+        <div class="form-group">
+            <!--
+            <p>Nombre: <input type="text" name="nombre" pattern="([a-zA-ZñN ]{3,}|German)" required="" /></p>
+            -->
+            <p>Nombre: <input type="text" name="nombre" required="" /></p>
+            <p>Email: <input type="email" name="email" placeholder="miemail@dominio.com" required="" /></p>
+            <p>Telefono: <input type="tel" name="telefono" required="" /></p>
+            <p>DNI: <input type="text" name="dni" required="" /></p>
+            <p><input type="submit" value="Enviar" /></p>
+        </div>
+    </form>
+
+</body>
+
+</html>
