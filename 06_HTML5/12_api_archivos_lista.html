@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo API archivos</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo API archivos</h1>
+        <h2>Lista de ficheros</h2>
+    </header>
+    <section>
+        <input type="file" id="inputFile" multiple />
+        <output id="listarFicheros"></output>
+    </section>
+</body>
+<script>
+    function capturarCambioInput(evt) {
+        var ficheros = evt.target.files;
+        var output = [];
+
+        //recorre todos los ficheros y terminara cuando no hay más
+        for (var i = 0; f = ficheros[i]; i++) {
+            //Una forma de formatear
+            output.push(
+                "<li><strong>",
+                escape(f.name),
+                "</strong> (",
+                f.type || "n/a", ") - ",
+                f.size, " bytes, ultima modificacion: ",
+                f.lastModifiedDate.toLocaleDateString(),
+                "</li>");
+        }
+        document.getElementById("listarFicheros").innerHTML = "<ul>" + output.join("") + "</ul>";
+
+    }
+
+    document.getElementById("inputFile").addEventListener("change", capturarCambioInput, false);
+</script>
+
+</html>

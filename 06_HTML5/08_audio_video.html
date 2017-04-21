@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ejemplo Audio & video</title>
+    <script type="text/javascript">
+        function probar() {
+            var videoDePaisano = document.getElementById("paisanoDeFirefox");
+
+            videoDePaisano.pause();
+            alert("Reproduccion parada.");
+            alert("Reproducir y bajar volumen.");
+            videoDePaisano.play();
+            videoDePaisano.volume = 0;
+            alert("Subir volumen volumen.");
+            videoDePaisano.volume = 0.5;
+            alert("Saltar minuto 2.");
+            videoDePaisano.currentTime = 120;
+
+            alert("Indices en el atributo seekable" + videoDePaisano.seekable.length);
+            alert("Tiempo de inicio" + videoDePaisano.seekable.start(0));
+            alert("Tiempo de Fin" + videoDePaisano.seekable.end(0));
+        }
+    </script>
+</head>
+
+<!-- Se pueden capturar eventos de audio/video, mirar en w3schools los eventos-->
+
+<body>
+    <h1>Ejemplo de Video</h1>
+    Boton para probar distintas funciones de video en JS -> <input type="button" value="probar" onclick="probar()" /><br/>
+    <video id="paisanoDeFirefox" autoplay controls width="640" heigth="360">
+		<source src="http://videos.mozilla.org/firefox/3.5/overview/overview.ogv"/>
+	</video>
+
+    <br/>
+
+    <h1>Ejemplo de Audio de Gallo</h1>
+    <audio controls>
+		<source src="http://www.htmlya.com.ar/html5/simulador/gallo.mp3" />
+		<source src="http://www.htmlya.com.ar/html5/simulador/gallo.ogg" />
+		<source src="http://www.htmlya.com.ar/html5/simulador/gallo.wav" />
+	</audio>
+</body>
+
+</html>

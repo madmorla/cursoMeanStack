@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo API archivos</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo API archivos</h1>
+        <h2>Arrastrar y soltar ficheros</h2>
+    </header>
+    <section>
+        <div id="drop_zone">Drop files here</div>
+        <output id="list"></output>
+    </section>
+</body>
+
+<script>
+    function seleccionarFicheros(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+
+        var ficheros = evt.dataTransfer.files; //Nos devuelve la lista de ficheros
+
+        var output = [];
+
+        for (var i = 0; f = ficheros[i]; i++) {
+            output.push("<li>" + escape(f.name) + "</li>");
+        }
+        document.getElementById("list").innerHTML = "<ul>" + output.join("") + "</ul>";
+    }
+
+    function capturarDragOver(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        evt.dataTransfer.dropEffect = "copy";
+    }
+    //Inicializar eventos
+    var zonaArrastre = document.getElementById("drop_zone");
+    zonaArrastre.addEventListener("dragover", capturarDragOver, false);
+    zonaArrastre.addEventListener("drop", seleccionarFicheros, false);
+</script>
+
+</html>
