@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Base</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/estilos-grid.css">
+</head>
+<!---->
+
+<body>
+    <!--Container mete un margen-->
+    <div class="container">
+        <h1>Ejemplos de GRID</h1>
+
+        <h2>Columna de tamaño 12</h2>
+        <!--contenedor con row hace que sea una fila-->
+        <div class="row">
+            <!--col divide por columnas-->
+            <div class="col-xs-12">Todo el ancho 1</div>
+            <div class="col-xs-12">Todo el ancho 2</div>
+            <div class="col-xs-12">Todo el ancho 3</div>
+            <div class="col-xs-12">Todo el ancho 4</div>
+        </div>
+
+        <h2>Columna de tamaño 6</h2>
+
+        <div class="row">
+            <div class="col-xs-6">Medio ancho 1</div>
+            <div class="col-xs-6">Medio ancho 2</div>
+            <div class="col-xs-6">Medio ancho 3</div>
+            <div class="col-xs-6">Medio ancho 4</div>
+        </div>
+
+        <h2>Columna de tamaño 4</h2>
+
+        <div class="row">
+            <div class="col-xs-4">Ancho un tercio 1</div>
+            <div class="col-xs-4">Ancho un tercio 2</div>
+            <div class="col-xs-4">Ancho un tercio 3</div>
+            <div class="col-xs-4">Ancho un tercio 4</div>
+            <div class="col-xs-4">Medio ancho 4</div>
+        </div>
+
+        <h2>Columna de tamaño 3</h2>
+
+        <div class="row">
+            <div class="col-xs-3">1</div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3">3</div>
+            <div class="col-xs-3">4</div>
+        </div>
+
+        <h2>Columna de tamaños diferentes según el ancho de pantalla, multidispositivo</h2>
+
+        <!--Aqui se modifican las filas según los tamaños de la pantalla/navegador-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus magni, incidunt natus perferendis similique totam atque, nesciunt nam nobis</div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 2</div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 3</div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 4</div>
+        </div>
+
+        <h2>Multidispositivo con clearfix</h2>
+
+        <!--Clearfix nos ayuda a ajustar la maquetación, el encuadre-->
+        <div class="row">
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus magni, incidunt natus perferendis similique totam atque, nesciunt nam nobis</div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 2</div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 3</div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">Columnas 4</div>
+        </div>
+        -->
+        <h2>Huecos con offset</h2>
+        <!--offset hace un desplazamiento de la columna para que no haya nada entre medias-->
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 col-md-offset-2">.col-md-4 .col-md-offset-4</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+        </div>
+    </div>
+</body>
+
+</html>
