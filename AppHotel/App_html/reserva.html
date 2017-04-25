@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reserva de Habitación</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center">RESERVAS</h1>
+        <br />
+        <div class="row">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="Nombre" class="control-label col-sm-2">Nombre</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nombre" placeholder="Introduzca su nombre" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="correo_electronico" class="control-label col-sm-2">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="correo_electronico" placeholder="Introduzca su E-mail" />
+                    </div>
+                </div>
+        </div>
+        <br />
+
+        <div class="row">
+            <div class="col-sm-2">
+                Fecha Entrada:
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div id='datetimepicker1' class="input-group date">
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                Fecha Entrada:
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div id='datetimepicker2' class="input-group date">
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                Tipo Habitación:
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <select id="tipo_habitacion" class="selectpicker">
+                        <option>Sencilla</option>
+                        <option>Doble</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                Nº habitaciones:
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <input type="number" id="num_habitaciones" value="1" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+        </div>
+        </form>
+
+        <script type="text/javascript">
+            $(function() {
+                $('#datetimepicker1').datetimepicker({
+                    locale: 'es'
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $('#datetimepicker2').datetimepicker({
+                    locale: 'es'
+                });
+            });
+        </script>
+</body>
+
+</html>
