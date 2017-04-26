@@ -44,3 +44,7 @@ Frameworks NodeJS:
 -Mongoose --> Acceso a mongodb
 
 -Electron --> Para crear app desktop con JavaScript
+
+HOSTING:
+-https://www.ovh.es/
+-amazon
