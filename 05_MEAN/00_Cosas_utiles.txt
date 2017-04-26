@@ -27,7 +27,6 @@ Sistema de Control de Versiones (SCV):(Por comandos)
 -Git --> Para proyectos grandes distribuidos
 -Subversion --> Para proyectos pequeños y sobretodo para gente que no es técnica
 
-
 Plataformas:
 -GitHub --> Proyectos públicos
 -BitBucket --> 1 proyecto privado
@@ -38,4 +37,10 @@ Clientes/Programas/Interfaces gráficas de SCV:
 Cuenta Atlasian: https://id.atlassian.com/profile/profile.action
 http://drunkcode.es/2015/07/07/sourcetree-y-olvidate-de-comandos/
 https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-source-tree/
+------------------------------------------------------------
+Frameworks NodeJS:
+-Loopback --> Usa android, ios, angularJS para app clientes...
+-Passport --> Autenticacion
+-Mongoose --> Acceso a mongodb
 
+-Electron --> Para crear app desktop con JavaScript
