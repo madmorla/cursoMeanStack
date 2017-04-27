@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi app sockets.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</head>
+
+<body>
+    <h1>Chat Node JS</h1>
+    <!--en onsubmit, con true enviaria form y con false no lo envia-->
+    <form onsubmit="return enviarMensaje()">
+        <input type="text" id="nombreUsuario" placeholder="Tu nombre" />
+        <input type="text" id="texto" placeholder="Escribe tu mensaje" />
+        <input type="submit" id="idSub" placeholder="Enviar" />
+    </form>
+    <div id="divMensajes">
+    </div>
+    <div id="clientesDiv">
+    </div>
+    <div id="fechaDiv">
+    </div>
+    <br/>
+</body>
+
+</html>

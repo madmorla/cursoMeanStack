@@ -42,6 +42,7 @@ Frameworks NodeJS:
 -Loopback --> Usa android, ios, angularJS para app clientes...
 -Passport --> Autenticacion
 -Mongoose --> Acceso a mongodb
+-Nodemon --> Recarga node automaticamente
 
 -Electron --> Para crear app desktop con JavaScript
 

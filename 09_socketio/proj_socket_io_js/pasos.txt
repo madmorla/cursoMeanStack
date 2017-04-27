@@ -1,0 +1,18 @@
+>npm init
+Hacemos npm init para hacer el packcage.json y cambiamos y añadimos las siguientes lineas:
+//   "main": "server/main.js",
+//   "scripts": {
+//     "start": "node server/main.js",
+//     "test": "echo \"Error: no test specified\" && exit 1"
+//   },
+
+
+>npm install express --save-dev
+>npm install nodemon --save-dev
+nodemon: Cada vez que guardas el fichero del servidor te reinicia el servidor directamente
+entonces ponemos en packcage.json:
+//  "start": "nodemon server/main.js",
+>npm install socket.io --save-dev
+
+Creamos el main.js en server y usamos 'npm start' para 
+Y empezamos a programar...

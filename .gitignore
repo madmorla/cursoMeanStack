@@ -193,6 +193,7 @@ ClientBin/
 node_modules/
 db_ejemplo/
 db_hotel/
+db_mensajes/
 orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
