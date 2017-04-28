@@ -13,6 +13,7 @@ nodemon: Cada vez que guardas el fichero del servidor te reinicia el servidor di
 entonces ponemos en packcage.json:
 //  "start": "nodemon server/main.js",
 >npm install socket.io --save-dev
+>npm install socketio --save-dev //VALEN LAS 2 FORMAS
 
 Creamos el main.js en server y usamos 'npm start' para 
 Y empezamos a programar...

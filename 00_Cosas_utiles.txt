@@ -49,3 +49,6 @@ Frameworks NodeJS:
 HOSTING:
 -https://www.ovh.es/
 -amazon
+
+Articulo interesante de observables y programacion reactiva y funcional:
+https://codekstudio.com/post-blog/conceptos-observables-rxjs-y-angular-2-javascript-reactivo-y-funcional/57d1e2840897131b5ec54b90

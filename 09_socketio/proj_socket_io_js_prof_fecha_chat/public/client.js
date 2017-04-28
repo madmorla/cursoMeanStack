@@ -14,6 +14,7 @@ function alRecibirFecha(data) {
 
 function mostrarMensajes(data) {
     //llamamos el metodo map que lo que hace es recorrer uno a uno los elementos del array y llama a una funcion callback
+    console.log(data);
     var html = data.map(function(elem, index) {
         return (`
             <div>

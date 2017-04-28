@@ -1,0 +1,11 @@
+<p style="color: red">
+    El Chat del VERANO, que vuelve el GRAN PRIXX!!!!
+</p>
+<br/>Mensaje
+<input type="text" [(ngModel)]="message.content" />
+<button (click)="sendMessage()">Enviar mensaje</button>
+<br/>
+<br/>
+<div *ngFor="let msg of messages">
+    {{ msg.user }}:- {{ msg.content }}
+</div>

@@ -1,0 +1,18 @@
+Creamos el proyecto nuevo de angular2 con:
+> ng new socketio-angular2
+Después creamos la carpeta socketio-server de manera normal o con mkdir y despues creamos un package.json dentro:
+socketio-server> npm init
+socketio-server> npm install express --save-dev
+socketio-server> npm install soscketio --save-dev
+-----------------------------
+Creamos server.js en la carpeta de socketio-server y lo programamos
+Después creamos el componente y el servicio de chat en socketio-angular2 con:
+socketio-angular2> ng generate component chat
+socketio-angular2> ng generate service chat
+
+Instalamos socket.io-cli en la carpeta de angular2 ya que lo utilizamos en chat.service.ts
+socketio-angular2> npm install socket.io-client --save-dev
+
+Y arrancamos el servidor de angular con:
+socketio-angular2> ng serve
+//SI DA FALLOS; copiar el archivo 'package.json' que tenemos y hacemos 'npm install', deberia de funcionar despues
