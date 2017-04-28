@@ -24,8 +24,11 @@ chat.on("connection", (socket) => {
         //Enviamos el mensaje al resto menos a nosotros
         socket.broadcast.emit("mando-un-mensaje", mensaje);
     });
+    //aki si se desconecta
+    socket.on("disconnect", (socket) => console.log("Desconectado!"));
 });
 
+//Esto de aqui abajo no va?
 chat.on("disconnect", (socket) => {
     console.log("Cliente desconectado");
 });
