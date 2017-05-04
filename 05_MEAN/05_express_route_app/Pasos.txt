@@ -1,0 +1,10 @@
+Primero hay que tener instalado express-generator de manera global:
+> npm install -g express-generator
+Creamos un proyecto de express, para ello:
+> express 05_express_route_app
+En la carpeta del proyecto, instalamos los modulos de dependencias de package.json, por lo que ejecutamos:
+05_express_route_app> npm install
+Para finalizar y lanzarla, utilizamos:
+05_express_route_app> npm start
+Abrimos el navegador y vamos a:
+http://localhost:3000/
